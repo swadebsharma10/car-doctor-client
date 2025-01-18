@@ -20,7 +20,7 @@ const About = () => {
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
             </p>
             <p className="pb-6">
-            the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  
+            The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  
             </p>
             <button className="btn btn-secondary btn-outline">Get More Info</button>
           </div>
