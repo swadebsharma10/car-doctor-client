@@ -1,11 +1,15 @@
-const BookingTab = ({booking}) => {
-      const {img, _id, serviceTitle
-            , customerName, email, price, date}= booking;
+import { MdDeleteForever } from "react-icons/md";
+
+const BookingTab = ({booking, handleDelete, handleConfirm}) => {
+      const {img, _id, serviceTitle, customerName, email, price, date, status}= booking;
+
+
+
   return (
-    <tr className="hover:bg-gray-300">
+    <tr className="hover:bg-gray-100">
       <th>
         <label>
-          <input type="checkbox" className="checkbox" />
+       <button onClick={()=>handleDelete(_id)}> <MdDeleteForever  className="text-2xl text-orange-500"/></button>
         </label>
       </th>
       <td>
@@ -30,7 +34,7 @@ const BookingTab = ({booking}) => {
       <td>Date: {date}</td>
       <td>Price: ${price}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+       { status === 'confirm' ? <button className="btn btn-primary btn-xs">Confirmed</button> : <button onClick={()=> handleConfirm(_id)} className="btn btn-secondary btn-xs">Confirm</button>}
       </th>
     </tr>
   );
